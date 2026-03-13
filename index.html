@@ -1,0 +1,216 @@
+<!Doctype html>
+<html lang="english">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-width,initialscale=1.0">
+    <title>Shree Ravi IT Services|IT Portfolio</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #38bdf8;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #020617;
+            top: 0;
+        }
+
+        nav h1 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a.hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #f08000;
+            border: none;
+            color: olivedrab;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .skills {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .skillsgrid {
+            display: grid;
+            grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #165;
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #334155;
+        }
+
+        .services {
+            padding: 80px 10%;
+            background: #ffc0cb;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .portfolio {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+
+        .project {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .contact {
+            padding: 80px 10%;
+            background: #020617;
+            text-align: center;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Shree Ravi IT Services</h1>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>Hello,I'm <span>Shree Ravi</span></h2>
+            <p>Diploma in information technology|Web Developer.</p>
+            <button class="btn">Hire Me</button>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">C++ Programming</div>
+        <div class="card">Ms-Office</div>
+        <div class="card">Dos</div>
+        <div class="card">Video editing.</div>
+        <div class="card">PDF editing.</div>
+        <div class="card">Online form filling</div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2>My Services</h2>
+        <div class="skills-grid">
+            <div class="card">Website design</div>
+            <div class="card">Wesite development</div>
+            <div class="card">Video Editing</div>
+            <div class="card">PDF Editing</div>
+            <div class="card">Computer Installation</div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <INPUT type="Phone" placeholder="Your Phone">
+        <INPUT type="message" placeholder="Your Message">
+        <button class="btn">Send Message</button>
+    </section>
+    <footer>
+        <p>
+            2026 YashJha|IT Portfolio
+        </p>
+    </footer>
+</body>
+
+</html>
