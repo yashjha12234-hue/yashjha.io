@@ -1,76 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shree Ravi It Services.</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash | IT & Digital Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#0f172a;color:#fff}
+    .container{max-width:1100px;margin:auto;padding:20px}header{padding:60px 20px;text-align:center}
+header h1{font-size:38px}
+header p{margin:15px 0;color:#cbd5f5}
+
+.btn{display:inline-block;padding:12px 25px;margin:10px;border-radius:30px;text-decoration:none;font-weight:600}
+.primary{background:#38bdf8;color:#000}
+.secondary{border:1px solid #38bdf8;color:#38bdf8}
+
+section{padding:60px 20px}
+h2{text-align:center;margin-bottom:30px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+.card{background:#1e293b;padding:20px;border-radius:15px;transition:.3s}
+.card:hover{transform:translateY(-5px)}
+
+.cta{background:#38bdf8;color:#000;text-align:center;padding:50px 20px;border-radius:20px}
+
+footer{text-align:center;padding:20px;background:#020617;color:#94a3b8}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+  </style>
 </head>
-<body class="bg-gray-50 font-sans">  
-  <nav class="bg-white shadow-md fixed w-full z-10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600">Shree Ravi It services.</h1>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#home" class="hover:text-indigo-600">Home</a>
-        <a href="#services" class="hover:text-indigo-600">Services</a>
-        <a href="#about" class="hover:text-indigo-600">About</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+<body><header>
+  <div class="container">
+    <h1>Hi, I'm Yash 👋</h1>
+    <p>I Provide IT & Digital Services for Students & Businesses</p>
+    <a href="#contact" class="btn primary">Hire Me</a>
+    <a href="#services" class="btn secondary">My Services</a>
+  </div>
+</header><section id="services">
+  <div class="container">
+    <h2>My Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Website Design & Development</h3>
+        <p>I create modern, responsive websites for businesses and personal use. Clean design with fast performance to grow your online presence.</p>
+      </div>
+      <div class="card">
+        <h3>MS Office Tasks</h3>
+        <p>I handle Word, Excel, and PowerPoint work with proper formatting and accuracy. Perfect for assignments, data entry, and presentations.</p>
+      </div>
+      <div class="card">
+        <h3>OS Installation</h3>
+        <p>Windows installation, setup, and basic troubleshooting for smooth system performance. Fast and reliable service for your PC or laptop.</p>
+      </div>
+      <div class="card">
+        <h3>Online Form Filling</h3>
+        <p>Accurate and fast online form filling for exams, jobs, and registrations. Ensuring error-free submission every time.</p>
+      </div>
+      <div class="card">
+        <h3>PDF Editing & Conversion</h3>
+        <p>Edit, convert, merge, and compress PDF files professionally. Suitable for documents, resumes, and office work.</p>
+      </div>
+      <div class="card">
+        <h3>Video Editing</h3>
+        <p>Basic video editing for YouTube, reels, and social media content. Clean cuts, simple effects, and smooth output.</p>
       </div>
     </div>
-  </nav>  
-  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-center px-6">
-    <div>
-      <h2 class="text-5xl font-bold mb-4">Build Your Digital Future</h2>
-      <p class="text-lg mb-6">Professional IT Solutions | Website Development | Operating system Installation Services</p>
-      <button class="bg-white text-indigo-600 px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">Get Started</button>
-    </div>
-  </section>  
-  <section id="services" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-10">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-8 px-6"><div class="p-6 bg-gray-100 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">Website Design and Development</h3>
-      <p>Modern, responsive and fast websites for your business.</p>
-    </div>
-
-    <div class="p-6 bg-gray-100 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">Operating system installation.</h3>
-      <p>Secure and reliable operating system setup for offices and homes.</p>
-    </div>
-
-    <div class="p-6 bg-gray-100 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">MICROSOFT OFFICE TASKS.</h3>
-      <p>Quick create,design ,editing and formatting.</p>
-    </div>
-        
-<div class="p-6 bg-gray-100 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">Video editing.</h3>
-      <p> Create and Design good hd quality videos .</p>   
-
   </div>
-</div>
+</section><section>
+  <div class="container">
+    <h2>Why Choose Me</h2>
+    <div class="grid">
+      <div class="card">Fast Delivery</div>
+      <div class="card">Affordable Pricing</div>
+      <div class="card">Reliable Work</div>
+    </div>
+  </div>
+</section><section>
+  <div class="container">
+    <div class="cta">
+      <h2>Need Any IT Work?</h2>
+      <p>Contact me now and get your work done quickly</p>
+      <a href="#contact" class="btn primary">Contact Now</a>
+    </div>
+  </div>
+</section><section id="contact">
+  <div class="container" style="text-align:center">
+    <h2>Contact Me</h2>
+    <p>Email: yashjha12234@gmail.com</p>
+    <p>WhatsApp: +919462788711</p>
+  </div>
+</section><a href="https://wa.me/9462788711" class="whatsapp">Chat</a>
 
-  </section> 
-  <section id="about" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold mb-6">About Us</h2>
-      <p class="text-lg">We provide professional IT solutions to help businesses grow faster with modern technology and reliable services.</p>
-    </div>
-  </section>  
-  <section id="contact" class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold mb-6">Contact Us</h2>
-      <form class="grid gap-4">
-        <input type="text" placeholder="Your Name" class="p-3 border rounded-xl" />
-        <input type="email" placeholder="Your Email" class="p-3 border rounded-xl" />
-        <textarea placeholder="Your Message" class="p-3 border rounded-xl"></textarea>
-        <button class="bg-indigo-600 text-white py-3 rounded-xl hover:bg-indigo-700">Send Message</button>
-      </form>
-    </div>
-  </section> 
-  <footer class="bg-indigo-600 text-white text-center py-6">
-    <p>© 2026 Shree Ravi It services. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2026 Yash | All Rights Reserved</p>
+</footer>
 </body>
-  </html>   
-  
+  </html>
