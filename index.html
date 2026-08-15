@@ -3,113 +3,947 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Yash provides IT, Website Development, Advanced Excel, MS Office, PDF Editing, Video Editing and Digital Services.">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <title>Yash | IT & Digital Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0f172a;color:#fff}
-    .container{max-width:1100px;margin:auto;padding:20px}header{padding:60px 20px;text-align:center}
-header h1{font-size:38px}
-header p{margin:15px 0;color:#cbd5f5}
 
-.btn{display:inline-block;padding:12px 25px;margin:10px;border-radius:30px;text-decoration:none;font-weight:600}
-.primary{background:#38bdf8;color:#000}
-.secondary{border:1px solid #38bdf8;color:#38bdf8}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-section{padding:60px 20px}
-h2{text-align:center;margin-bottom:30px}
+    html{
+      scroll-behavior:smooth;
+    }
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    body{
+      background:#0f172a;
+      color:#fff;
+      line-height:1.6;
+    }
 
-.card{background:#1e293b;padding:20px;border-radius:15px;transition:.3s}
-.card:hover{transform:translateY(-5px)}
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:20px;
+    }
 
-.cta{background:#38bdf8;color:#000;text-align:center;padding:50px 20px;border-radius:20px}
+    header{
+      padding:60px 20px;
+      text-align:center;
+    }
 
-footer{text-align:center;padding:20px;background:#020617;color:#94a3b8}
+    header h1{
+      font-size:38px;
+    }
 
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:12px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    header p{
+      margin:15px 0;
+      color:#cbd5f5;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      margin:10px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .primary{
+      background:#38bdf8;
+      color:#000;
+    }
+
+    .secondary{
+      border:1px solid #38bdf8;
+      color:#38bdf8;
+    }
+
+    section{
+      padding:60px 20px;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:15px;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    .card p{
+      color:#cbd5e1;
+    }
+
+    .cta{
+      background:#38bdf8;
+      color:#000;
+      text-align:center;
+      padding:50px 20px;
+      border-radius:20px;
+    }
+
+    .cta h2{
+      color:#000;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    /* WhatsApp */
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#fff;
+      padding:12px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      z-index:1000;
+    }
+
+    /* AI Button */
+
+    .ai-button{
+      position:fixed;
+      bottom:80px;
+      right:20px;
+      width:58px;
+      height:58px;
+      border:none;
+      border-radius:50%;
+      background:#38bdf8;
+      color:#000;
+      font-size:27px;
+      cursor:pointer;
+      box-shadow:0 5px 20px rgba(0,0,0,.4);
+      z-index:1001;
+      transition:.3s;
+    }
+
+    .ai-button:hover{
+      transform:scale(1.08);
+    }
+
+    /* AI Chat */
+
+    .ai-box{
+      position:fixed;
+      right:20px;
+      bottom:150px;
+      width:340px;
+      max-width:calc(100% - 40px);
+      height:480px;
+      background:#0b1220;
+      border:1px solid #334155;
+      border-radius:18px;
+      display:none;
+      flex-direction:column;
+      overflow:hidden;
+      box-shadow:0 10px 40px rgba(0,0,0,.5);
+      z-index:1002;
+    }
+
+    .ai-header{
+      background:#38bdf8;
+      color:#000;
+      padding:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:600;
+    }
+
+    .ai-close{
+      border:none;
+      background:transparent;
+      color:#000;
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .ai-messages{
+      flex:1;
+      padding:15px;
+      overflow-y:auto;
+    }
+
+    .message{
+      padding:10px 12px;
+      border-radius:12px;
+      margin-bottom:10px;
+      max-width:85%;
+      font-size:14px;
+      word-wrap:break-word;
+    }
+
+    .bot{
+      background:#1e293b;
+      color:#fff;
+      margin-right:auto;
+    }
+
+    .user{
+      background:#38bdf8;
+      color:#000;
+      margin-left:auto;
+    }
+
+    .suggestions{
+      padding:0 12px 8px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+
+    .suggestion{
+      border:1px solid #38bdf8;
+      background:transparent;
+      color:#38bdf8;
+      border-radius:15px;
+      padding:5px 9px;
+      font-size:11px;
+      cursor:pointer;
+    }
+
+    .ai-input-area{
+      display:flex;
+      padding:10px;
+      border-top:1px solid #334155;
+      gap:8px;
+    }
+
+    .ai-input{
+      flex:1;
+      border:none;
+      outline:none;
+      border-radius:20px;
+      padding:10px 14px;
+      background:#1e293b;
+      color:#fff;
+    }
+
+    .ai-send{
+      border:none;
+      background:#38bdf8;
+      color:#000;
+      border-radius:20px;
+      padding:0 15px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    @media(max-width:600px){
+
+      header h1{
+        font-size:30px;
+      }
+
+      .ai-box{
+        right:10px;
+        bottom:140px;
+        width:calc(100% - 20px);
+        height:450px;
+      }
+
+      .ai-button{
+        right:15px;
+      }
+
+      .whatsapp{
+        right:15px;
+      }
+    }
 
   </style>
 </head>
-<body><header>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
   <div class="container">
+
     <h1>Hi, I'm Yash 👋</h1>
-    <p>I Provide IT & Digital Services for Students & Businesses</p>
-    <a href="#contact" class="btn primary">Hire Me</a>
-    <a href="#services" class="btn secondary">My Services</a>
+
+    <p>
+      I Provide IT & Digital Services for Students & Businesses
+    </p>
+
+    <a href="#contact" class="btn primary">
+      Hire Me
+    </a>
+
+    <a href="#services" class="btn secondary">
+      My Services
+    </a>
+
   </div>
-</header><section id="services">
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
   <div class="container">
+
     <h2>My Services</h2>
+
     <div class="grid">
+
       <div class="card">
+
         <h3>Website Design & Development</h3>
-        <p>I create modern, responsive websites for businesses and personal use. Clean design with fast performance to grow your online presence.</p>
+
+        <p>
+          I create modern, responsive websites for businesses and personal use.
+          Clean design with fast performance to grow your online presence.
+        </p>
+
       </div>
+
+
       <div class="card">
+
+        <h3>Advanced Excel Services</h3>
+
+        <p>
+          Professional Advanced Excel solutions including Dashboards,
+          Pivot Tables, Charts, Data Cleaning, MIS Reports, Data Analysis,
+          VLOOKUP, XLOOKUP, INDEX-MATCH, IF, SUMIFS,
+          Excel Automation and PDF to Excel conversion.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
         <h3>MS Office Tasks</h3>
-        <p>I handle Word, Excel, and PowerPoint work with proper formatting and accuracy. Perfect for assignments, data entry, and presentations.</p>
+
+        <p>
+          I handle Word, Excel and PowerPoint work with proper formatting
+          and accuracy. Perfect for assignments, data entry and presentations.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>OS Installation</h3>
-        <p>Windows installation, setup, and basic troubleshooting for smooth system performance. Fast and reliable service for your PC or laptop.</p>
+
+        <p>
+          Windows installation, setup and basic troubleshooting
+          for smooth system performance.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>Online Form Filling</h3>
-        <p>Accurate and fast online form filling for exams, jobs, and registrations. Ensuring error-free submission every time.</p>
+
+        <p>
+          Accurate and fast online form filling for exams,
+          jobs and registrations.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>PDF Editing & Conversion</h3>
-        <p>Edit, convert, merge, and compress PDF files professionally. Suitable for documents, resumes, and office work.</p>
+
+        <p>
+          Edit, convert, merge and compress PDF files professionally.
+          Suitable for documents, resumes and office work.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>Video Editing</h3>
-        <p>Basic video editing for YouTube, reels, and social media content. Clean cuts, simple effects, and smooth output.</p>
+
+        <p>
+          Basic video editing for YouTube, Reels and social media content.
+          Clean cuts, simple effects and smooth output.
+        </p>
+
       </div>
+
     </div>
+
   </div>
-  <div class="card">
-  <h3>Advanced Excel Services</h3>
-  <p>I provide professional Advanced Excel solutions including Dashboards, Pivot Tables, Charts, Data Cleaning, MIS Reports, Data Analysis, Formula Development (VLOOKUP, XLOOKUP, INDEX-MATCH, IF, SUMIFS), Excel Automation, and PDF to Excel conversion for students and businesses.</p>
-</div>
-</section><section>
+
+</section>
+
+
+<!-- WHY CHOOSE ME -->
+
+<section>
+
   <div class="container">
+
     <h2>Why Choose Me</h2>
+
     <div class="grid">
-      <div class="card">Fast Delivery</div>
-      <div class="card">Affordable Pricing</div>
-      <div class="card">Reliable Work</div>
+
+      <div class="card">
+
+        <h3>⚡ Fast Delivery</h3>
+
+        <p>
+          Quick and efficient work.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>💰 Affordable Pricing</h3>
+
+        <p>
+          Professional services at reasonable prices.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>✅ Reliable Work</h3>
+
+        <p>
+          Focus on accuracy and quality.
+        </p>
+
+      </div>
+
     </div>
+
   </div>
-</section><section>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
   <div class="container">
+
     <div class="cta">
+
       <h2>Need Any IT Work?</h2>
-      <p>Contact me now and get your work done quickly</p>
-      <a href="#contact" class="btn primary">Contact Now</a>
+
+      <p>
+        Contact me now and get your work done quickly.
+      </p>
+
+      <a href="#contact" class="btn secondary">
+        Contact Now
+      </a>
+
     </div>
+
   </div>
-</section><section id="contact">
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
   <div class="container" style="text-align:center">
+
     <h2>Contact Me</h2>
-    <p>Email: yashjha12234@gmail.com</p>
-    <p>WhatsApp: +919462788711</p>
+
+    <p>
+      Email: yashjha12234@gmail.com
+    </p>
+
+    <p>
+      WhatsApp: +91 9462788711
+    </p>
+
   </div>
-</section><a href="https://wa.me/9462788711" class="whatsapp">Chat</a>
+
+</section>
+
+
+<!-- AI BUTTON -->
+
+<button
+  class="ai-button"
+  id="aiButton"
+  aria-label="Open Yash AI Assistant"
+  type="button">
+
+  ✨
+
+</button>
+
+
+<!-- AI CHAT -->
+
+<div
+  class="ai-box"
+  id="aiBox"
+  role="dialog"
+  aria-label="Yash AI Assistant">
+
+  <div class="ai-header">
+
+    <span>✨ Yash AI Assistant</span>
+
+    <button
+      class="ai-close"
+      id="aiClose"
+      type="button"
+      aria-label="Close AI Assistant">
+
+      ×
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="ai-messages"
+    id="aiMessages"
+    aria-live="polite">
+  </div>
+
+
+  <div class="suggestions">
+
+    <button
+      class="suggestion"
+      type="button"
+      data-question="What services do you provide?">
+
+      Services
+
+    </button>
+
+
+    <button
+      class="suggestion"
+      type="button"
+      data-question="What is your Advanced Excel service?">
+
+      Excel
+
+    </button>
+
+
+    <button
+      class="suggestion"
+      type="button"
+      data-question="How can I contact Yash?">
+
+      Contact
+
+    </button>
+
+  </div>
+
+
+  <div class="ai-input-area">
+
+    <input
+      id="aiInput"
+      class="ai-input"
+      type="text"
+      maxlength="300"
+      autocomplete="off"
+      placeholder="Ask me something...">
+
+
+    <button
+      id="aiSend"
+      class="ai-send"
+      type="button">
+
+      Send
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- WHATSAPP -->
+
+<a
+  href="https://wa.me/919462788711"
+  class="whatsapp"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  WhatsApp
+
+</a>
+
+
+<!-- FOOTER -->
 
 <footer>
-  <p>© 2026 Yash | All Rights Reserved</p>
+
+  <p>
+    © 2026 Yash | All Rights Reserved
+  </p>
+
 </footer>
+
+
+<script>
+
+"use strict";
+
+
+/* AI ELEMENTS */
+
+const aiButton =
+  document.getElementById("aiButton");
+
+const aiBox =
+  document.getElementById("aiBox");
+
+const aiClose =
+  document.getElementById("aiClose");
+
+const aiMessages =
+  document.getElementById("aiMessages");
+
+const aiInput =
+  document.getElementById("aiInput");
+
+const aiSend =
+  document.getElementById("aiSend");
+
+
+/* OPEN AI */
+
+aiButton.addEventListener("click", function(){
+
+  aiBox.style.display = "flex";
+
+  aiInput.focus();
+
+  if(aiMessages.children.length === 0){
+
+    addBotMessage(
+      "Hi! 👋 I'm Yash AI Assistant. Ask me about Yash's services, Advanced Excel, websites or contact details."
+    );
+
+  }
+
+});
+
+
+/* CLOSE AI */
+
+aiClose.addEventListener("click", function(){
+
+  aiBox.style.display = "none";
+
+});
+
+
+/* BOT MESSAGE */
+
+function addBotMessage(text){
+
+  const message =
+    document.createElement("div");
+
+  message.className = "message bot";
+
+  /*
+    textContent is used instead of innerHTML.
+    This helps prevent user text from being interpreted as HTML.
+  */
+
+  message.textContent = text;
+
+  aiMessages.appendChild(message);
+
+  scrollMessages();
+
+}
+
+
+/* USER MESSAGE */
+
+function addUserMessage(text){
+
+  const message =
+    document.createElement("div");
+
+  message.className = "message user";
+
+  message.textContent = text;
+
+  aiMessages.appendChild(message);
+
+  scrollMessages();
+
+}
+
+
+/* SCROLL */
+
+function scrollMessages(){
+
+  aiMessages.scrollTop =
+    aiMessages.scrollHeight;
+
+}
+
+
+/* AI RESPONSE */
+
+function getAIResponse(question){
+
+  const q =
+    question.toLowerCase().trim();
+
+
+  if(
+    q.includes("hello") ||
+    q.includes("hi") ||
+    q.includes("hey")
+  ){
+
+    return "Hello! 👋 I'm Yash AI Assistant. How can I help you?";
+
+  }
+
+
+  if(
+    q.includes("service") ||
+    q.includes("what do you") ||
+    q.includes("provide")
+  ){
+
+    return "Yash provides Website Development, Advanced Excel, MS Office, OS Installation, Online Form Filling, PDF Editing and Video Editing services.";
+
+  }
+
+
+  if(
+    q.includes("excel") ||
+    q.includes("dashboard") ||
+    q.includes("mis") ||
+    q.includes("vlookup") ||
+    q.includes("xlookup")
+  ){
+
+    return "Advanced Excel services include Dashboards, MIS Reports, Pivot Tables, Charts, Data Cleaning, Data Analysis, VLOOKUP, XLOOKUP, INDEX-MATCH, IF, SUMIFS and Excel Automation.";
+
+  }
+
+
+  if(
+    q.includes("website") ||
+    q.includes("web development")
+  ){
+
+    return "Yash creates modern and responsive websites for businesses and personal projects.";
+
+  }
+
+
+  if(q.includes("pdf")){
+
+    return "PDF services include editing, conversion, merging, compression and PDF-to-Excel work.";
+
+  }
+
+
+  if(q.includes("video")){
+
+    return "Basic video editing is available for YouTube, Reels and social media content.";
+
+  }
+
+
+  if(
+    q.includes("contact") ||
+    q.includes("whatsapp") ||
+    q.includes("email")
+  ){
+
+    return "You can contact Yash at yashjha12234@gmail.com or WhatsApp at +91 9462788711.";
+
+  }
+
+
+  if(
+    q.includes("price") ||
+    q.includes("cost") ||
+    q.includes("charge")
+  ){
+
+    return "Pricing depends on the work required. Contact Yash on WhatsApp with your requirements to get a quote.";
+
+  }
+
+
+  return "I can help you with information about Yash's services, Advanced Excel, website development, PDF editing, video editing and contact details.";
+
+}
+
+
+/* SEND MESSAGE */
+
+function sendMessage(){
+
+  const question =
+    aiInput.value.trim();
+
+
+  if(!question){
+    return;
+  }
+
+
+  if(question.length > 300){
+
+    addBotMessage(
+      "Please keep your question under 300 characters."
+    );
+
+    return;
+
+  }
+
+
+  addUserMessage(question);
+
+  aiInput.value = "";
+
+
+  const answer =
+    getAIResponse(question);
+
+
+  setTimeout(function(){
+
+    addBotMessage(answer);
+
+  },300);
+
+}
+
+
+/* SEND BUTTON */
+
+aiSend.addEventListener(
+  "click",
+  sendMessage
+);
+
+
+/* ENTER KEY */
+
+aiInput.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Enter"){
+
+      sendMessage();
+
+    }
+
+  }
+);
+
+
+/* SUGGESTIONS */
+
+document
+  .querySelectorAll(".suggestion")
+  .forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        const question =
+          button.dataset.question;
+
+        aiInput.value =
+          question;
+
+        sendMessage();
+
+      }
+    );
+
+  });
+
+</script>
+
 </body>
   </html>
